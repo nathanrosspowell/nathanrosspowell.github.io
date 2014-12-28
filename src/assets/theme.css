@@ -1,17 +1,41 @@
 body {
     padding-top: 70px;
     padding-bottom: 30px;
+    color: white;
+    background: darkslategrey;
 }
 
 .navbar {
     margin-top:30px;
-    border-bottom: 3px solid black;
-}
-
-.navbar div.container {
+    border-bottom: 3px solid whitesmoke;
+    font-size: 120%;
+    background: dimgrey;
+    background: rgba(47,79,79,.75);
 }
 
 #navbar-profile-img {
     margin-top:-40px;
-    border: 3px solid black;
+    border: 3px solid whitesmoke;
+}
+
+.navbar ul li > a {
+    color: #a9a9a9;
+    background-color: transparent;
+    padding-bottom: 5px;
+}
+
+.navbar li > a:hover,
+.navbar li > a:focus {
+    background-color: transparent;
+    border-bottom: 3px solid;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255,255,255,.25);
+}
+
+.navbar .active > a,
+.navbar .active > a:hover,
+.navbar .active > a:focus {
+    background-color: transparent;
+    color: whitesmoke;
+    border-bottom: 3px solid whitesmoke;
 }
