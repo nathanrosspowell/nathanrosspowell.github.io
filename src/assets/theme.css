@@ -1,21 +1,36 @@
+/*
+ * #DCDCCC;//text
+ * #3F3F3F;//background 
+ * rgba(63,63,63,.75);//background75
+ *
+ * #80D4AA;//highlight
+ */
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
     padding-top: 70px;
     padding-bottom: 30px;
-    color: white;
-    background: darkslategrey;
+    color: #DCDCCC;
+    background: #3F3F3F;
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+a { 
+    color: #80D4AA;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .navbar {
     margin-top:30px;
-    border-bottom: 3px solid whitesmoke;
+    border-bottom: 3px solid #80D4AA;
     font-size: 120%;
-    background: dimgrey;
-    background: rgba(47,79,79,.75);
+    background: rgba(63,63,63,.75);
 }
 
 #navbar-profile-img {
     margin-top:-40px;
-    border: 3px solid whitesmoke;
+    border: 3px solid #80D4AA;
 }
 
 .navbar ul li > a {
@@ -39,3 +54,11 @@ body {
     color: whitesmoke;
     border-bottom: 3px solid whitesmoke;
 }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.jumbotron {
+    color: #DCDCCC;
+    background: #333333;
+}
+
+
