@@ -2,7 +2,7 @@
  * #DCDCCC;//text
  *
  * #3F3F3F;//background 
- * rgba(63,63,63,.75);//background75
+ * rgba(63,63,63,.85);//background75
  *
  * #80D4AA;//highlight
  *
@@ -12,7 +12,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 30px;
     color: #DCDCCC;
     background: #3F3F3F;
@@ -28,7 +28,17 @@ a {
     margin-top:30px;
     border-bottom: 3px solid #80D4AA;
     font-size: 120%;
-    background: rgba(63,63,63,.75);
+    background: rgba(63,63,63,.85);
+}
+
+div.navbar-header > button {
+    background: whitesmoke;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: black;
+    color: whitesmoke;
+    color: #3F3F3F;
 }
 
 #navbar-profile-img {
@@ -72,6 +82,7 @@ a {
 
 ul.nav.navbar-nav.navbar-right > li > ul > li > a:hover,
 ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
+    color: black;
     border: none;
     background: #333333;
 }
