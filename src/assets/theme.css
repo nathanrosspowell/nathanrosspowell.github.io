@@ -1,18 +1,17 @@
 body {
-  padding-top: 70px;
-  padding-bottom: 30px;
+    padding-top: 70px;
+    padding-bottom: 30px;
 }
 
-.theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
+.navbar {
+    margin-top:30px;
+    border-bottom: 3px solid black;
 }
 
-.theme-showcase > p > .btn {
-  margin: 5px 0;
+.navbar div.container {
 }
 
-.theme-showcase .navbar .container {
-  width: auto;
+#navbar-profile-img {
+    margin-top:-40px;
+    border: 3px solid black;
 }
