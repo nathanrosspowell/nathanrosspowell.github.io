@@ -1,9 +1,12 @@
 /*
  * #DCDCCC;//text
+ *
  * #3F3F3F;//background 
  * rgba(63,63,63,.75);//background75
  *
  * #80D4AA;//highlight
+ *
+ * whitesmoke;//nvbrtext
  */
 
 
@@ -53,6 +56,24 @@ a {
     background-color: transparent;
     color: whitesmoke;
     border-bottom: 3px solid whitesmoke;
+}
+
+.navbar .dropdown, .navbar .dropdown-menu {
+    color: whitesmoke;
+    background: #3F3F3F;
+}
+
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+    background: #3F3F3F;
+    border-color: #333333;
+}
+
+ul.nav.navbar-nav.navbar-right > li > ul > li > a:hover,
+ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
+    border: none;
+    background: #333333;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
