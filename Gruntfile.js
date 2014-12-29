@@ -22,6 +22,8 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    pkg : grunt.file.readJSON('package.json'),
+    site: grunt.file.readYAML('src/data/site.yml'),
 
     config: {
       src: 'src',
@@ -64,13 +66,17 @@ module.exports = function(grunt) {
     },
 
     assemble: {
-      pages: {
-        options: {
+      options: {
           flatten: true,
           assets: '<%= config.dist %>/assets',
+          helpers: 'src/helpers/helper-*.js',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs'
+      },
+      pages: {
+        options: {
+          layout: 'src/templates/layouts/default.hbs'
         },
         files: {
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
@@ -90,16 +96,34 @@ module.exports = function(grunt) {
         cwd: 'src/assets/',
         src: '**',
         dest: '<%= config.dist %>/assets/css/'
+      },
+      meta: {
+        expand: true,
+        cwd: 'src/meta/',
+        src: '**',
+        dest: '<%= config.dist %>/'
       }
     },
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.dist %>/**/*.{html,xml}'],
+
+    'gh-pages': {
+      website: {
+        options: {
+          base: 'dist/',
+          branch: 'master',
+          message: 'Grunt deploy <%= grunt.template.today() %>'
+        },
+        src: ['**']
+      }
+    }
 
   });
 
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('server', [
     'build',
@@ -111,6 +135,11 @@ module.exports = function(grunt) {
     'clean',
     'copy',
     'assemble'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'default',
+    'gh-pages'
   ]);
 
   grunt.registerTask('default', [
