@@ -6,12 +6,20 @@ root: true
 
 <h2>blog----</h2>
 {{#each blog}}
-    {{#each this.pages}}
+    {{#each pages}}
         <hr/>
-        {{ this }}
+        <hr/>
+        This: {{ this }}
+        Title: {{data.title}}
+        {{data.posted}}
+        {{data.blog}}
+        <hr/>
         {{ basename }}
-        {{ src }}
-        {{{src }}}
+        <hr/>
+{{#each data.content}}
+  {{{md this}}}
+{{/each}}
+      
     {{/each}}
 {{/each}}
 
@@ -19,10 +27,7 @@ root: true
 {{#each error}}
     {{#each this.pages}}
         <hr/>
-        {{ this }}
-        {{ basename }}
         {{ src }}
-        {{{src }}}
     {{/each}}
 {{/each}}
 
@@ -31,10 +36,7 @@ root: true
 {{#each root}}
     {{#each this.pages}}
         <hr/>
-        {{ this }}
-        {{ basename }}
         {{ src }}
-        {{{src }}}
     {{/each}}
 {{/each}}
 

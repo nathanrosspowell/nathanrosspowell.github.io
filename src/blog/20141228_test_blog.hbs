@@ -2,9 +2,10 @@
 title: Test Blog
 posted: 2014-12-28
 blog: true
+content: ['README.md', 'src/content/test_blog.md']
 ---
 
-{{#markdown}}
+{{#markdown}}  
 Hello
 =====
 
@@ -15,3 +16,7 @@ Test
 1. 2
 1. 3
 {{/markdown}}
+
+{{#each content}}
+  {{{md this }}}
+{{/each}}

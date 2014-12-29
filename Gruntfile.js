@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{,*/}*.{md,hbs,yml}'],
+        files: ['<%= config.src %>/**/*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
       livereload: {
@@ -73,7 +73,10 @@ module.exports = function(grunt) {
             sortorder: 'descending'
           }],
           assets: '<%= config.dist %>/assets',
-          helpers: '<%= config.dist %>/helpers/helper-*.js',
+          helpers: [
+              'node_modules/handlebars-helpers/lib/helpers/*.js',
+              '<%= config.src %>/helpers/helper-*.js'
+          ],
           layout: 'default.hbs',
           layoutdir: '<%= config.src %>/layouts/',
           data: '<%= config.src %>/data/*.{json,yml}',
