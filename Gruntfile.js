@@ -9,12 +9,6 @@
 
 'use strict';
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// '<%= config.src %>/templates/pages/{,*/}*.hbs'
-// use this if you want to match all subfolders:
-// '<%= config.src %>/templates/pages/**/*.hbs'
-
 module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
@@ -32,7 +26,7 @@ module.exports = function(grunt) {
 
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+        files: ['<%= config.src %>/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
       livereload: {
@@ -67,20 +61,43 @@ module.exports = function(grunt) {
 
     assemble: {
       options: {
-          flatten: true,
+          collections: [{
+            name: 'root',
+            sortby: 'posted',
+            sortorder: 'descending'
+          }, {
+            name: 'error',
+            sortby: 'posted',
+            sortorder: 'descending'
+          }, {
+            name: 'blog',
+            sortby: 'posted',
+            sortorder: 'descending'
+          }],
           assets: '<%= config.dist %>/assets',
           helpers: '<%= config.dist %>/helpers/helper-*.js',
-          layout: '<%= config.src %>/templates/layouts/default.hbs',
+          layout: 'default.hbs',
+          layoutdir: '<%= config.src %>/layouts/',
           data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/templates/partials/*.hbs'
+          partials: '<%= config.src %>/partials/*.hbs'
       },
-      pages: {
-        options: {
-          layout: 'src/templates/layouts/default.hbs'
-        },
-        files: {
-          '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-        }
+      posts: {
+        files: [{
+          cwd: '<%= config.src %>/root/',
+          dest: '<%= config.dist %>/',
+          expand: true,
+          src: '**/*.hbs'
+        }, {
+          cwd: '<%= config.src %>/blog/',
+          dest: '<%= config.dist %>/',
+          expand: true,
+          src: '**/*.hbs'
+        }, {
+          cwd: '<%= config.src %>/error/',
+          dest: '<%= config.dist %>/',
+          expand: true,
+          src: '**/*.hbs'
+        }]
       }
     },
 
@@ -95,7 +112,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'src/assets/',
         src: '**',
-        dest: '<%= config.dist %>/assets/css/'
+        dest: '<%= config.dist %>/assets/'
       },
       meta: {
         dot: true,

@@ -1,0 +1,41 @@
+---
+title: Blog
+root: true
+---
+<h1>Posts</h1>
+
+<h2>blog----</h2>
+{{#each blog}}
+    {{#each this.pages}}
+        <hr/>
+        {{ this }}
+        {{ basename }}
+        {{ src }}
+        {{{src }}}
+    {{/each}}
+{{/each}}
+
+<h2>error----</h2>
+{{#each error}}
+    {{#each this.pages}}
+        <hr/>
+        {{ this }}
+        {{ basename }}
+        {{ src }}
+        {{{src }}}
+    {{/each}}
+{{/each}}
+
+
+<h2>root----</h2>
+{{#each root}}
+    {{#each this.pages}}
+        <hr/>
+        {{ this }}
+        {{ basename }}
+        {{ src }}
+        {{{src }}}
+    {{/each}}
+{{/each}}
+
+
