@@ -17,13 +17,13 @@ component: navbar
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <!-- you can exclude pages using \{{#isnt}} helper: \{{#isnt data.title 'Blog'}} -->
-        {{#each root}}
+        {{#withSort root}}
           {{#each pages}}
-            <li{{#if this.isCurrentPage}} class="active"{{/if}}>
-              <a href="{{relative dest this.dest}}">{{ data.title }}</a> 
+            <li{{#contains ../../title data.title}} class="active"{{/contains}}>
+              <a href="{{relative dest dest}}">{{ data.title }}</a> 
             </li>
           {{/each}}
-        {{/each}}
+        {{/withSort}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

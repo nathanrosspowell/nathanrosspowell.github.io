@@ -63,8 +63,6 @@ module.exports = function(grunt) {
       options: {
           collections: [{
             name: 'root',
-            sortby: 'posted',
-            sortorder: 'descending'
           }, {
             name: 'error',
             sortby: 'posted',
