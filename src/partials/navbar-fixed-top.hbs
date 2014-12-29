@@ -19,9 +19,11 @@ component: navbar
         <!-- you can exclude pages using \{{#isnt}} helper: \{{#isnt data.title 'Blog'}} -->
         {{#withSort root}}
           {{#each pages}}
-            <li{{#contains ../../title data.title}} class="active"{{/contains}}>
+          {{#isnt data.title "Home"}} 
+            <li{{#contains ../../../basename basename}} class="active"{{/contains}}>
               <a href="{{relative dest dest}}">{{ data.title }}</a> 
             </li>
+          {{/isnt}}
           {{/each}}
         {{/withSort}}
       </ul>

@@ -1,11 +1,17 @@
 ---
 title: Home
 root: true
-heading: 'Yo, Assemble!'
-lead: Welcome to my blog!
+heading: 'Welcome!'
+lead: Welcome to my website!
+intro: 'src/content/index-jumbotron.md'
+content: 'src/content/index-body.md'
 ---
 <div class="jumbotron">
   <h1>{{ heading }}</h1>
-  <h3> TEST </h3>
+  <p>
+     {{{ md intro }}}
+  </p>
 </div>
-  <p>This is a Assemble Generator template using</p>
+<p>
+    {{{ md content }}}
+</p>

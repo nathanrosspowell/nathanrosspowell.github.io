@@ -71,6 +71,10 @@ module.exports = function(grunt) {
             name: 'blog',
             sortby: 'posted',
             sortorder: 'descending'
+          }, {
+            name: 'games',
+            sortby: 'posted',
+            sortorder: 'descending'
           }],
           assets: '<%= config.dist %>/assets',
           helpers: [
@@ -89,12 +93,17 @@ module.exports = function(grunt) {
           expand: true,
           src: '**/*.hbs'
         }, {
+          cwd: '<%= config.src %>/error/',
+          dest: '<%= config.dist %>/',
+          expand: true,
+          src: '**/*.hbs'
+        }, {
           cwd: '<%= config.src %>/blog/',
           dest: '<%= config.dist %>/',
           expand: true,
           src: '**/*.hbs'
         }, {
-          cwd: '<%= config.src %>/error/',
+          cwd: '<%= config.src %>/games/',
           dest: '<%= config.dist %>/',
           expand: true,
           src: '**/*.hbs'
