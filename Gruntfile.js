@@ -69,7 +69,7 @@ module.exports = function(grunt) {
       options: {
           flatten: true,
           assets: '<%= config.dist %>/assets',
-          helpers: 'src/helpers/helper-*.js',
+          helpers: '<%= config.dist %>/helpers/helper-*.js',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs'
@@ -98,6 +98,7 @@ module.exports = function(grunt) {
         dest: '<%= config.dist %>/assets/css/'
       },
       meta: {
+        dot: true,
         expand: true,
         cwd: 'src/meta/',
         src: '**',
