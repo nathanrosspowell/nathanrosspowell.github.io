@@ -109,7 +109,18 @@ module.exports = function(grunt) {
           src: '**/*.hbs'
         }]
       },
-    games: {
+      blog: {
+        options: {
+          layout: 'blog.hbs'
+        },
+        files: [{
+          cwd: '<%= config.src %>/blog/',
+          dest: '<%= config.dist %>/',
+          expand: true,
+          src: '**/*.hbs'
+        }]
+      },
+      games: {
         options: {
           layout: 'games.hbs'
         },
@@ -120,7 +131,6 @@ module.exports = function(grunt) {
           src: '**/*.hbs'
         }]
       }
-
     },
 
     copy: {

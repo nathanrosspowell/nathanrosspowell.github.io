@@ -1,0 +1,15 @@
+list:
+  -
+    title: "Blog"
+    link: "blog"
+  -
+    title: "Games"
+    link: "games"
+  -
+    title: "CV"
+    link: "cv"
+  -
+    title: "Contact"
+    link: "contact-me"
+    
+
