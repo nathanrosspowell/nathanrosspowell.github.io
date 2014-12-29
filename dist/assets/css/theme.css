@@ -24,11 +24,18 @@ a {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+ #nav-background {
+    position: fixed;
+    width: 100%;
+    height: 180px;
+    top: -100px;
+    background: rgba(63,63,63,.85);
+}
+
 .navbar {
     margin-top:30px;
     border-bottom: 3px solid #80D4AA;
     font-size: 120%;
-    background: rgba(63,63,63,.85);
 }
 
 div.navbar-header > button {
@@ -70,7 +77,6 @@ div.navbar-header > button {
 
 .navbar .dropdown, .navbar .dropdown-menu {
     color: whitesmoke;
-    background: #3F3F3F;
 }
 
 .nav .open>a,
@@ -80,6 +86,10 @@ div.navbar-header > button {
     border-color: #333333;
 }
 
+ul.nav.navbar-nav.navbar-right > li > ul {
+    background: #3F3F3F;
+}
+
 ul.nav.navbar-nav.navbar-right > li > ul > li > a:hover,
 ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
     color: black;
@@ -87,6 +97,23 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
     background: #333333;
 }
 
+/* standard navbar */
+@media (min-width: 768px) {
+    #nav-background {
+        background: rgba(63,63,63,.85);
+    }
+}
+
+/* mobile navbar */
+@media (max-width: 767px) {
+    .navbar {
+        background: #3F3F3F;
+        text-align: right; 
+    }
+    #nav-background {
+        background: #3F3F3F;
+    }
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .jumbotron {
     color: #DCDCCC;
