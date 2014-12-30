@@ -157,19 +157,19 @@ div.panel.panel-default > div.panel-heading,
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // http://coolestguidesontheplanet.com/creating-social-media-menu-icons-fontawesome/ 
-#footer-social-container {
+.social-container {
     text-align: center;
 }
 
-#footer-social-links {
+.social-links {
     display: inline-block;
 }
- 
-#footer-social-links > li {
+
+.social-links > li {
     list-style-type: none;
     float: left;
 }
- 
+
 i.social.fa {
     background: #80D4AA;
     color: #fff;
