@@ -213,3 +213,15 @@ i.social.fa {
 i.social.fa:hover {
     opacity: .7;
 }
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.btn-primary { 
+    border-color: #000;
+    background-color: #333;
+}
+
+.btn-primary:hover { 
+    border-color: #[insert color here]; 
+    background-color: #[insert color here];
+}
