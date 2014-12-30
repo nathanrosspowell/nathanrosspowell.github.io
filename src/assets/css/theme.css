@@ -35,14 +35,14 @@ a {
     height: 180px;
     top: -100px;
     background: rgba(63,63,63,.85);
-    z-index: 1009; 
+    z-index: 1009;
 }
 
 .navbar {
     margin-top:30px;
     border-bottom: 3px solid #80D4AA;
     font-size: 120%;
-    z-index: 1010; 
+    z-index: 1010;
 }
 
 div.navbar-header > button {

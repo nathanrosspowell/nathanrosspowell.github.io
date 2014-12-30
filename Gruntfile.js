@@ -140,7 +140,13 @@ module.exports = function(grunt) {
         src: '**',
         dest: '<%= config.dist %>/assets/'
       },
-      theme: {
+      fontawesome: {
+        expand: true,
+        cwd: 'bower_components/components-font-awesome/',
+        src: '{css,fonts}/**',
+        dest: '<%= config.dist %>/assets/'
+      },
+      srcassets: {
         expand: true,
         cwd: 'src/assets/',
         src: '**',
