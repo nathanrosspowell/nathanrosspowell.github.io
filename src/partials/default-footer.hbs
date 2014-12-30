@@ -1,6 +1,15 @@
 ---
 component: footer
+date: new Date()
 ---
+    <footer>
+        <div class="well">
+            <small>
+                &copy; {{ site.author }} {{formatDate site.date "%Y"}}
+                This website was last statically updated: {{formatDate site.date "%Y/%m/%d %H:%M:%S"}}.
+            </small>
+        </div>
+    </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

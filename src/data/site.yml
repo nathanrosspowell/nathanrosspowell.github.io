@@ -1,1 +1,3 @@
 title: nathanrosspowell.com
+author: Nathan Ross Powell
+date: <%= new  Date() %>  
