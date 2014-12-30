@@ -114,10 +114,24 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
         background: #3F3F3F;
     }
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .jumbotron {
     color: #DCDCCC;
     background: #333333;
 }
 
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.panel {
+    color: #DCDCCC;
+    background: #3F3F3F;
+    border-color: #333333;
+}
+
+div.panel.panel-default > div.panel-heading,
+.panel-heading {
+    color: #DCDCCC;
+    background: #333333;
+}
 
