@@ -1,7 +1,7 @@
 /*
  * #DCDCCC;//text
  *
- * #3F3F3F;//background 
+ * #3F3F3F;//background
  * rgba(63,63,63,.85);//background75
  *
  * #80D4AA;//highlight
@@ -11,31 +11,38 @@
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     padding-top: 100px;
     padding-bottom: 30px;
     color: #DCDCCC;
     background: #3F3F3F;
+    margin-bottom: 100px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-a { 
+a {
     color: #80D4AA;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
- #nav-background {
+#nav-background {
     position: fixed;
     width: 100%;
     height: 180px;
     top: -100px;
     background: rgba(63,63,63,.85);
+    z-index: 1009;
 }
 
 .navbar {
     margin-top:30px;
     border-bottom: 3px solid #80D4AA;
     font-size: 120%;
+    z-index: 1010;
 }
 
 div.navbar-header > button {
@@ -108,12 +115,13 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
 @media (max-width: 767px) {
     .navbar {
         background: #3F3F3F;
-        text-align: right; 
+        text-align: right;
     }
     #nav-background {
         background: #3F3F3F;
     }
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .jumbotron {
     color: #DCDCCC;
@@ -121,3 +129,60 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
 }
 
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.well,
+.panel {
+    color: #DCDCCC;
+    background: #3F3F3F;
+    border-color: #333333;
+}
+
+div.panel.panel-default > div.panel-heading,
+.panel-heading {
+    color: #DCDCCC;
+    background: #333333;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #333333;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// http://coolestguidesontheplanet.com/creating-social-media-menu-icons-fontawesome/ 
+.social-container {
+    text-align: center;
+}
+
+.social-links {
+    display: inline-block;
+}
+
+.social-links > li {
+    list-style-type: none;
+    float: left;
+}
+
+i.social.fa {
+    background: #80D4AA;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+i.social.fa:hover {
+    opacity: .7;
+}
