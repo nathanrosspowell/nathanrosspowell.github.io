@@ -3,21 +3,25 @@ title: Blog
 root: true
 ---
 <h1>Blog Posts</h1>
+<hr/>
 {{#each blog}}
     {{#each pages}}
-        <hr/>
-        <h2>
-            <a href="{{ basename }}.html">{{data.title}}</a>
-        </h2>
-        <p>
-            Posted:{{data.posted}}
-        </p>
-        {{#if data.intro }}
-            <p>
-                {{{ md data.intro }}}
-            <p>
-            <a href="{{ basename }}.html">Read more...</a>
-        {{/if}}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>
+                    <a href="{{ basename }}.html">{{data.title}}</a>
+                </h2>
+                Posted:{{data.posted}}
+            </div>
+            <div class="panel-body">
+                {{#if data.intro }}
+                    <p>
+                        {{{ md data.intro }}}
+                    <p>
+                    <a class="btn btn-primary btn-large" href="{{ basename }}.html">Read more...</a>
+                {{/if}}
+            </div>
+        </div>
     {{/each}}
 {{/each}}
 
