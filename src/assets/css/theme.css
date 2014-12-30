@@ -7,6 +7,9 @@
  * #80D4AA;//highlight
  *
  * whitesmoke;//nvbrtext
+ *
+ * #80D4AA;//Primary
+ * #8FAF9F;//Primary
  */
 
 
@@ -212,4 +215,52 @@ i.social.fa {
 
 i.social.fa:hover {
     opacity: .7;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.btn-custom { 
+  color: #333333;
+  background-color: #80D4AA; 
+  border-color: #608A76; 
+} 
+ 
+.btn-custom:hover, 
+.btn-custom:focus, 
+.btn-custom:active, 
+.btn-custom.active, 
+.open .dropdown-toggle.btn-custom { 
+  color: #333333;
+  background-color: #87E6B7; 
+  border-color: #608A76; 
+} 
+ 
+.btn-custom:active, 
+.btn-custom.active, 
+.open .dropdown-toggle.btn-custom { 
+  background-image: none; 
+} 
+ 
+.btn-custom.disabled, 
+.btn-custom[disabled], 
+fieldset[disabled] .btn-custom, 
+.btn-custom.disabled:hover, 
+.btn-custom[disabled]:hover, 
+fieldset[disabled] .btn-custom:hover, 
+.btn-custom.disabled:focus, 
+.btn-custom[disabled]:focus, 
+fieldset[disabled] .btn-custom:focus, 
+.btn-custom.disabled:active, 
+.btn-custom[disabled]:active, 
+fieldset[disabled] .btn-custom:active, 
+.btn-custom.disabled.active, 
+.btn-custom[disabled].active, 
+fieldset[disabled] .btn-custom.active { 
+  background-color: #80D4AA; 
+  border-color: #608A76; 
+} 
+ 
+.btn-custom .badge { 
+  color: #80D4AA; 
+  background-color: #ffffff; 
 }
