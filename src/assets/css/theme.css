@@ -20,7 +20,7 @@ body {
     padding-bottom: 30px;
     color: #DCDCCC;
     background: #3F3F3F;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -149,6 +149,40 @@ div.panel.panel-default > div.panel-heading,
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 100px;
     background-color: #333333;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// http://coolestguidesontheplanet.com/creating-social-media-menu-icons-fontawesome/ 
+#footer-social-container {
+    text-align: center;
+}
+
+#footer-social-links {
+    display: inline-block;
+}
+ 
+#footer-social-links > li {
+    list-style-type: none;
+    float: left;
+}
+ 
+i.social.fa {
+    background: #80D4AA;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+i.social.fa:hover {
+    opacity: .7;
 }

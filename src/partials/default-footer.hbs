@@ -4,10 +4,18 @@ date: new Date()
 ---
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">
+        <br/>
+        <div id="footer-social-container" class="container">
+            <ul id="footer-social-links">
+                {{> social-media }}
+            </ul>
+        </div>
+        <div class="container">
+            <p class="text-muted">
                 &copy; {{ site.author }} {{formatDate site.date "%Y"}}.
                 This website was last statically updated: {{formatDate site.date "%Y/%m/%d %H:%M:%S"}}.
-        </p>
+            </p>
+        </div>
       </div>
     </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
