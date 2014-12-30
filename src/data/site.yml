@@ -1,3 +1,4 @@
 title: nathanrosspowell.com
 author: Nathan Ross Powell
 date: <%= new  Date() %>  
+googleanalyitics: UA-33462621-1 
