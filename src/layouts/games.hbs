@@ -5,14 +5,112 @@
 <div class="container theme-showcase" role="main">
 
     <div class="jumbotron">
-        <h1>{{ title }}</h1>
+        <h1 style="display:inline;">{{ title }}</h1><h6 style="display:inline;"> Released: {{formatDate posted "%B %Y"}} </h6>
         <p>{{ intro }}</p>
     </div>
-  
-    {{> body }}
-  
-    {{ twitter }}
 
+    <div class="row">
+        <div class="col-md-2 col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Links</h4>
+                </div>
+                <div class="panel-body">
+                    <ul class="social-links">
+                        {{#if metacritic}}
+                            <li><a href="{{ metacritic }}"><i class="social fa fa-pie-chart"></i></a></li>
+                        {{/if}}
+                        {{#if facebook}}
+                            <li><a href="{{ facebook }}"><i class="social fa fa-facebook"></i></a></li>
+                        {{/if}}
+                        {{#if twitter}}
+                            <li><a href="{{ twitter }}"><i class="social fa fa-twitter"></i></a></li>
+                        {{/if}}
+                        {{#if youtube}}
+                            <li><a href="{{ youtube }}"><i class="social fa fa-youtube"></i></a></li>
+                        {{/if}}
+                        {{#if gametrailer}}
+                            <li><a href="{{ gametrailer }}"><i class="social fa fa-video-camera"></i></a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Info</h4>
+                </div>
+                <div class="panel-body">
+                    {{> body }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#if mediabar}}
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>{{ title }}</h4>
+        </div>
+          <div class="panel-body">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                {{#each mediabar }}
+                    <li data-target="#carousel-example-generic" data-slide-to="{{@index}}"
+                    {{#if @first }}
+                        class="active"
+                    {{/if}}
+                    >
+                    </li>
+                {{/each}}
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                {{#each mediabar }}
+                    <div class="item
+                    {{#if @first }}
+                        active
+                    {{/if}}
+                    ">
+                        {{#is type "youtube" }}
+                            <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+                                <iframe allowfullscreen="" 
+                                        src="http://www.youtube.com/embed/{{ src }}?feature=player_detailpage" 
+                                        frameborder="0">
+                                </iframe>
+                            </div>
+                        {{/is}}
+                        {{#is type "image" }}
+                            <img src="{{../../assets}}/{{ src }}" class="carousel-img"/>
+                        {{/is}}
+                        {{#is type "gametrailer" }}
+                            <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+                                <iframe allowfullscreen="" 
+                                        src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:{{ url }}" 
+                                        width="512" 
+                                        height="288" 
+                                        frameborder="0"></iframe>
+                            </div> 
+                        {{/is}}
+                      <div class="carousel-caption">
+                        {{ data.title }}
+                      </div>
+                    </div>
+                {{/each}}
+              </div>
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+        </div>
+      </div>
+    {{/if}}
 </div>
 
 {{> default-footer }}
