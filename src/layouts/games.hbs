@@ -19,19 +19,19 @@
                 <div class="panel-body">
                     <ul class="social-links">
                         {{#if metacritic}}
-                            <li><a href="{{ metacritic }}"><i class="social fa fa-pie-chart"></i></a></li>
+                            <li><a title="Metacritic" href="{{ metacritic }}"><i class="social fa fa-pie-chart"></i></a></li>
                         {{/if}}
                         {{#if facebook}}
-                            <li><a href="{{ facebook }}"><i class="social fa fa-facebook"></i></a></li>
+                            <li><a title="Facebook" href="{{ facebook }}"><i class="social fa fa-facebook"></i></a></li>
                         {{/if}}
                         {{#if twitter}}
-                            <li><a href="{{ twitter }}"><i class="social fa fa-twitter"></i></a></li>
+                            <li><a title="Twitter" href="{{ twitter }}"><i class="social fa fa-twitter"></i></a></li>
                         {{/if}}
                         {{#if youtube}}
-                            <li><a href="{{ youtube }}"><i class="social fa fa-youtube"></i></a></li>
+                            <li><a title="YouTube" href="{{ youtube }}"><i class="social fa fa-youtube"></i></a></li>
                         {{/if}}
                         {{#if gametrailer}}
-                            <li><a href="{{ gametrailer }}"><i class="social fa fa-video-camera"></i></a></li>
+                            <li><a title="Gametrailers" href="{{ gametrailer }}"><i class="social fa fa-video-camera"></i></a></li>
                         {{/if}}
                     </ul>
                 </div>
@@ -50,10 +50,10 @@
     </div>
 
     {{#if mediabar}}
-        {{> media-carousel }} 
+        {{> media-carousel }}
     {{/if}}
 </div>
 
 {{> default-footer }}
 
- 
+
