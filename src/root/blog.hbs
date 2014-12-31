@@ -11,15 +11,20 @@ root: true
                 <h2>
                     <a href="{{ basename }}.html">{{data.title}}</a>
                 </h2>
-                Posted:{{data.posted}}
+                Posted: {{data.posted}}
             </div>
             <div class="panel-body">
+                {{#if data.tagline}}
+                    <h3>
+                        {{ data.tagline }}
+                    </h3>
+                {{/if}}
                 {{#if data.intro }}
                     <p>
                         {{{ md data.intro }}}
                     <p>
-                    <a class="btn btn-custom btn-large" href="{{ basename }}.html">Read more...</a>
                 {{/if}}
+                <a class="btn btn-custom btn-large" href="{{ basename }}.html">Read more...</a>
             </div>
         </div>
     {{/each}}
