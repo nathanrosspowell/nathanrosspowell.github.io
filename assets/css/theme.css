@@ -12,7 +12,6 @@
  * #8FAF9F;//Primary
  */
 
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 html {
     position: relative;
@@ -301,7 +300,4 @@ fieldset[disabled] .btn-custom.active {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
 
