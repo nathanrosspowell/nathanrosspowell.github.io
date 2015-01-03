@@ -8,8 +8,11 @@
         <h1>{{ title }}</h1>
         <h6>Posted: {{ posted }}</h6>
         {{#if tagline }}
-            <h3>{{ tagline }}</h3>
+            <h2>{{ tagline }}</h2>
         {{/if}}
+        {{#if intro }}
+            {{{ md intro }}}
+        {{/if }}
     </div>
 
     {{> body }}

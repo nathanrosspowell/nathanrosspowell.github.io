@@ -4,9 +4,69 @@ posted: 2014/12/29 13:23
 blog: true
 tagline: Hello, blogosphere!
 intro: src/content/blog-2014-12-29-first-intro.md
-content: src/content/blog-2014-12-29-first.md
 ---
 
-{{{ md intro }}}
+{{#markdown}}
 
-{{{ md content }}}
+Version 1 - [Django][django]
+============================
+
+The very first time I tried to make _this_ website I had very little experience outside of editing raw HTML.
+With my programming knowledge mainly based in [C++][cpp] and [Python][python], I did some research and settled on using the [Django][django] framework.
+
+After going through all of tutorials and setting up a basic blog I fell at the hurdle of getting the thing hosted.
+Whatever year it was when I attempted this, combined with my limited knowledge of all things server side, I found it hard to get a free/cheap solution for hosting the python back end.
+
+
+Version 2 - [Flask][flask]
+==========================
+
+Having a database, users, onlione interface for publishing articles, etc. was all a bit much for a small toy website like this.
+With some more research I found out about static websites and that lead me to the [Frozen Flask][frozenflask] project which generated static HTML  files for a app made with the [Flask][flask] micro framework.
+
+[Flask][flask] seemed to fit my use case better than  [Django][django] and with a little work the static website output was easy to copy across to the [GitHub Pages][ghpages] branch of the [project][oldgithub].
+
+With the ability to push the website straight to the free hosting I managed to get more structure and 'style' than Version 1.
+A lot of iteration was done on this version and as I learned about all things _web_.
+
+### Version 2.5 - [Grunt][grunt]
+
+As I made other toy websites such as [Interface Zero][interface] and [Presentations][presentations] I leverages the power of [Node.js][node] and [Grunt][grunt].
+[Grunt][grunt] replaced all of the shell scripts that I had made for automating the tasks of running the static site generation.
+As that was so easy to do, I also got packages to enable me to prettify and minimize parts of the website.
+I also got a very nice package [grrunt-gh-pages][gruntgh] which simplified pushing the dist files to the server.
+
+
+Version 3 - [assemble.io][assemble]
+===================================
+
+When I lost the dev enviroment that I set up on a laptop to work with the [Flask][flask] project I stopped updating it.
+When I wanted to make some impovements to the site I jumped into the code (specifically the template for the navbar) and I was completely lost!
+A classic programmers error - expecting that the code would make sense in the future!
+
+Seeing as there is very little traffic to the site I decided to just re-do the whole thing from scratch.
+
+With node installed, there are only a few global package installs and then the website can be set up to run.
+I currently have the dev enviroment running on Linux and Windows 7.
+The built in task `grunt server` allows me to make 'live changes' to the locally server files greatly improving the workflow from my hashed together Flask and Grunt combo in Version 2.
+
+The Future
+==========
+
+[assemble.io][assemble] is still being developed. In the future I will upgrade some of the code to make use of plugins written by the community and maybe write some more detailed write ups on how I get [assemble.io][assemble] to work for me.
+
+[django]: https://www.djangoproject.com/ 
+[cpp]: http://en.wikipedia.org/wiki/C%2B%2B 
+[python]: https://www.python.org/ 
+[flask]: http://flask.pocoo.org/ 
+[frozenflask]: http://pythonhosted.org/Frozen-Flask/ 
+[ghpages]: https://pages.github.com/ 
+[oldgithub]:  https://github.com/nathanrosspowell/nathanrosspowell.github.com-old/
+[interface]: http://nathanrosspowell.github.io/interfacezero/
+[presentations]: http://nathanrosspowell.github.io/presentations/
+[node]: http://nodejs.org/
+[grunt]: http://gruntjs.com/
+[assemble]: http://assemble.io/
+[gruntgh]: https://www.npmjs.com/package/grunt-build-gh-pages  
+
+{{/markdown}}
