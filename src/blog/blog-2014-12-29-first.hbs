@@ -21,7 +21,7 @@ Whatever year it was when I attempted this, combined with my limited knowledge o
 Version 2 - [Flask][flask]
 ==========================
 
-Having a database, users, onlione interface for publishing articles, etc. was all a bit much for a small toy website like this.
+Having a database, users, online interface for publishing articles, etc. was all a bit much for a small toy website like this.
 With some more research I found out about static websites and that lead me to the [Frozen Flask][frozenflask] project which generated static HTML  files for a app made with the [Flask][flask] micro framework.
 
 [Flask][flask] seemed to fit my use case better than  [Django][django] and with a little work the static website output was easy to copy across to the [GitHub Pages][ghpages] branch of the [project][oldgithub].
@@ -34,21 +34,21 @@ A lot of iteration was done on this version and as I learned about all things _w
 As I made other toy websites such as [Interface Zero][interface] and [Presentations][presentations] I leverages the power of [Node.js][node] and [Grunt][grunt].
 [Grunt][grunt] replaced all of the shell scripts that I had made for automating the tasks of running the static site generation.
 As that was so easy to do, I also got packages to enable me to prettify and minimize parts of the website.
-I also got a very nice package [grrunt-gh-pages][gruntgh] which simplified pushing the dist files to the server.
+I also got a very nice package [grunt-gh-pages][gruntgh] which simplified pushing the dist files to the server.
 
 
 Version 3 - [assemble.io][assemble]
 ===================================
 
-When I lost the dev enviroment that I set up on a laptop to work with the [Flask][flask] project I stopped updating it.
-When I wanted to make some impovements to the site I jumped into the code (specifically the template for the navbar) and I was completely lost!
+When I lost the dev environment that I set up on a laptop to work with the [Flask][flask] project I stopped updating it.
+When I wanted to make some improvements to the site I jumped into the code (specifically the template for the navbar) and I was completely lost!
 A classic programmers error - expecting that the code would make sense in the future!
 
 Seeing as there is very little traffic to the site I decided to just re-do the whole thing from scratch.
 
 With node installed, there are only a few global package installs and then the website can be set up to run.
-I currently have the dev enviroment running on Linux and Windows 7.
-The built in task `grunt server` allows me to make 'live changes' to the locally server files greatly improving the workflow from my hashed together Flask and Grunt combo in Version 2.
+I currently have the dev environment running on Linux and Windows 7.
+The built in task `grunt server` allows me to make 'live changes' to the locally server files greatly improving the work flow from my hashed together Flask and Grunt combo in Version 2.
 
 The Future
 ==========
@@ -68,5 +68,6 @@ The Future
 [grunt]: http://gruntjs.com/
 [assemble]: http://assemble.io/
 [gruntgh]: https://www.npmjs.com/package/grunt-build-gh-pages  
+[grunt-gh-pages]: https://www.npmjs.com/package/grunt-gh-pages 
 
 {{/markdown}}
