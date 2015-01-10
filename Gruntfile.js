@@ -146,13 +146,19 @@ module.exports = function(grunt) {
         src: ['**/*.html'], 
         dest: '<%= config.dist %>', 
         rename: function(dest, src) {
+            console.log( "------------");
+            console.log( dest, "&&", src );
             var filename = src.replace(/^.*[\\\/]/, '');
             var withoutExt = filename.replace(/.html/, '' );
-            if ( filename === "index.html" || !isNaN(parseInt(withoutExt)) ) {
+            console.log( filename, "&&", withoutExt );
+            if ( filename === "index.html" || !isNaN(Number(withoutExt)) ) {
                 // Homepage and error pages stay in the root.
+                console.log( "root:: ", dest + "/" + filename );
                 return dest + "/" + filename;
             } else {
                 // All other files go into a folder (named after the file) as index.html
+                //
+                console.log("index:: ",   dest + "/" + src.replace(/.html/, "/index.html") );
                 return dest + "/" + src.replace(/.html/, "/index.html");
             }
         }
