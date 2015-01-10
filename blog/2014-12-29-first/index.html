@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog | nathanrosspowell.com</title>
+    <title>First! | nathanrosspowell.com</title>
 
     <!-- Reset CSS -->
     <link rel="stylesheet" href="/assets/css/reset.min.css">
@@ -46,26 +46,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><img id="navbar-profile-img" src="/assets/jpg/nathan-100x100.jpg" class="img-circle"></img><!--nathanrosspowell.com--></a>
+      <a class="navbar-brand" href="/"><img id="navbar-profile-img" src="/assets/jpg/nathan-100x100.jpg" class="img-circle"></img><!--nathanrosspowell.com--></a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <!-- you can exclude pages using {{#isnt}} helper: {{#isnt data.title 'Blog'}} -->
         
-          <li class="active">
-            <a href="/blog.html">Blog</a> 
+          <li>
+            <a href="/blog/">Blog</a> 
           </li>
         
           <li>
-            <a href="/games.html">Games</a> 
+            <a href="/games/">Games</a> 
           </li>
         
           <li>
-            <a href="/cv.html">CV</a> 
+            <a href="/cv/">CV</a> 
           </li>
         
           <li>
-            <a href="/contact-me.html">Contact</a> 
+            <a href="/contact-me/">Contact</a> 
           </li>
         
       </ul>
@@ -92,86 +92,70 @@
 
 <div class="container theme-showcase" role="main">
 
-  
-<h1>Blog Posts</h1>
-<hr/>
-
-    
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>
-                    <a href="blog-2014-12-30-poker-ii.html">Poker II Upgrades</a>
-                </h2>
-                Posted: 2014/12/30 22:42
-                <a href="blog-2014-12-30-poker-ii.html#disqus_thread">0 Comments</a>
-            </div>
-            <div class="panel-body">
-                
-                    <h3>
-                        Keyboards are awesome!
-                    </h3>
-                
-                
-                    <p>
-                        <p>Recently, I have dived into the world of mechanical keyboards. </p>
-<p>As someone who spends far too much time at a keyboard, both professionaly and personally, it seems only natural to invest in the tools on my desktop.
-There is definitely a large array of choices for keyboards as long as you are willing to get over the price barrier of what a &#39;normal&#39; keyboard is worth.</p>
-<p>My personal preference for periferals is Logitech.
-The last keyboard and mouse combo I purchased was the Wave for about £50.
-It was then a big step to buy a new keyboard from a far smaller, unknown to me, company for $130.       </p>
-
-                    <p>
-                
-                <a class="btn btn-custom btn-large" href="blog-2014-12-30-poker-ii.html">Read more...</a>
-            </div>
-        </div>
-    
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>
-                    <a href="blog-2014-12-29-first.html">First!</a>
-                </h2>
-                Posted: 2014/12/29 13:23
-                <a href="blog-2014-12-29-first.html#disqus_thread">0 Comments</a>
-            </div>
-            <div class="panel-body">
-                
-                    <h3>
-                        Hello, blogosphere!
-                    </h3>
-                
-                
-                    <p>
-                        <p>I have re-re-made my personal website, again, again!</p>
+    <div class="jumbotron">
+        <h1>First!</h1>
+        <h6>Posted: 2014/12/29 13:23</h6>
+        
+            <h2>Hello, blogosphere!</h2>
+        
+        
+            <p>I have re-re-made my personal website, again, again!</p>
 <p>This time I have remade everything using the <a href="http://assemble.io" title="assemble.io the grunt blogging system">assemble.io</a> framework which is based on <a href="http://nodejs.org" title="node.js the JavaScript framework">node.js</a>.</p>
 <p>The linux laptop that I was developing my website on reached the end of it&#39;s life and setting up the project to work on Windows (temporarily) was going so well...
 The templates had reached the point where I was unsure what world I was living on...
 So, the re-write happened!</p>
 
-                    <p>
-                
-                <a class="btn btn-custom btn-large" href="blog-2014-12-29-first.html">Read more...</a>
-            </div>
-        </div>
+        
+    </div>
+
     
 
+<h1 id="version-1-django-django-">Version 1 - <a href="https://www.djangoproject.com/">Django</a></h1>
+<p>The very first time I tried to make <em>this</em> website I had very little experience outside of editing raw HTML.
+With my programming knowledge mainly based in <a href="http://en.wikipedia.org/wiki/C%2B%2B">C++</a> and <a href="https://www.python.org/">Python</a>, I did some research and settled on using the <a href="https://www.djangoproject.com/">Django</a> framework.</p>
+<p>After going through all of tutorials and setting up a basic blog I fell at the hurdle of getting the thing hosted.
+Whatever year it was when I attempted this, combined with my limited knowledge of all things server side, I found it hard to get a free/cheap solution for hosting the python back end.</p>
+<h1 id="version-2-flask-flask-">Version 2 - <a href="http://flask.pocoo.org/">Flask</a></h1>
+<p>Having a database, users, online interface for publishing articles, etc. was all a bit much for a small toy website like this.
+With some more research I found out about static websites and that lead me to the <a href="http://pythonhosted.org/Frozen-Flask/">Frozen Flask</a> project which generated static HTML  files for a app made with the <a href="http://flask.pocoo.org/">Flask</a> micro framework.</p>
+<p><a href="http://flask.pocoo.org/">Flask</a> seemed to fit my use case better than  <a href="https://www.djangoproject.com/">Django</a> and with a little work the static website output was easy to copy across to the <a href="https://pages.github.com/">GitHub Pages</a> branch of the <a href="https://github.com/nathanrosspowell/nathanrosspowell.github.com-old/">project</a>.</p>
+<p>With the ability to push the website straight to the free hosting I managed to get more structure and &#39;style&#39; than Version 1.
+A lot of iteration was done on this version and as I learned about all things <em>web</em>.</p>
+<h3 id="version-2-5-grunt-grunt-">Version 2.5 - <a href="http://gruntjs.com/">Grunt</a></h3>
+<p>As I made other toy websites such as <a href="http://nathanrosspowell.github.io/interfacezero/">Interface Zero</a> and <a href="http://nathanrosspowell.github.io/presentations/">Presentations</a> I leverages the power of <a href="http://nodejs.org/">Node.js</a> and <a href="http://gruntjs.com/">Grunt</a>.
+<a href="http://gruntjs.com/">Grunt</a> replaced all of the shell scripts that I had made for automating the tasks of running the static site generation.
+As that was so easy to do, I also got packages to enable me to prettify and minimize parts of the website.
+I also got a very nice package <a href="https://www.npmjs.com/package/grunt-build-gh-pages">grunt-gh-pages</a> which simplified pushing the dist files to the server.</p>
+<h1 id="version-3-assemble-io-assemble-">Version 3 - <a href="http://assemble.io/">assemble.io</a></h1>
+<p>When I lost the dev environment that I set up on a laptop to work with the <a href="http://flask.pocoo.org/">Flask</a> project I stopped updating it.
+When I wanted to make some improvements to the site I jumped into the code (specifically the template for the navbar) and I was completely lost!
+A classic programmers error - expecting that the code would make sense in the future!</p>
+<p>Seeing as there is very little traffic to the site I decided to just re-do the whole thing from scratch.</p>
+<p>With node installed, there are only a few global package installs and then the website can be set up to run.
+I currently have the dev environment running on Linux and Windows 7.
+The built in task <code>grunt server</code> allows me to make &#39;live changes&#39; to the locally server files greatly improving the work flow from my hashed together Flask and Grunt combo in Version 2.</p>
+<h1 id="the-future">The Future</h1>
+<p><a href="http://assemble.io/">assemble.io</a> is still being developed. In the future I will upgrade some of the code to make use of plugins written by the community and maybe write some more detailed write ups on how I get <a href="http://assemble.io/">assemble.io</a> to work for me.</p>
 
 
-<script type="text/javascript">
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
 
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
-
-
-
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>Comments</h4>
+        </div>
+        <div class="panel-body">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
 </div>
 
 
@@ -196,7 +180,7 @@ var disqus_shortname = 'nathanrosspowell'; // required: replace example with you
         <div class="container">
             <p class="text-muted">
                 &copy; Nathan Ross Powell 2015.
-                This website was last statically updated: 2015/01/09 22:04:24.
+                This website was last statically updated: 2015/01/09 23:48:10.
             </p>
         </div>
       </div>
