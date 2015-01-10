@@ -12,14 +12,14 @@ component: navbar
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{relative page.dest "dist/index.html"}}"><img id="navbar-profile-img" src="/{{assets}}/jpg/nathan-100x100.jpg" class="img-circle"></img><!--{{ site.title }}--></a>
+      <a class="navbar-brand" href="/"><img id="navbar-profile-img" src="/{{assets}}/jpg/nathan-100x100.jpg" class="img-circle"></img><!--{{ site.title }}--></a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <!-- you can exclude pages using \{{#isnt}} helper: \{{#isnt data.title 'Blog'}} -->
         {{#each navigation.list }}
           <li{{#contains ../basename link}} class="active"{{/contains}}>
-            <a href="{{ link }}.html">{{ title }}</a> 
+            <a href="/{{ link }}/">{{ title }}</a> 
           </li>
         {{/each}}
       </ul>

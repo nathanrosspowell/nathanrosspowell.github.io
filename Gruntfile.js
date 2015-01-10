@@ -18,16 +18,22 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg : grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('src/data/site.yml'),
+    navigation: grunt.file.readYAML('src/data/navigation.yml'),
 
     config: {
       src: 'src',
-      dist: 'dist'
+      dist: 'dist',
+      temp: 'temp'
     },
 
     watch: {
       assemble: {
         files: ['<%= config.src %>/**/*.{md,hbs,yml,css}'],
-        tasks: ['assemble']
+        tasks: [
+            'assemble', 
+            'copy:assemble', 
+            'replace:assemble'
+        ]
       },
       livereload: {
         options: {
@@ -89,22 +95,22 @@ module.exports = function(grunt) {
       posts: {
         files: [{
           cwd: '<%= config.src %>/root/',
-          dest: '<%= config.dist %>/',
+          dest: '<%= config.temp %>/',
           expand: true,
           src: '**/*.hbs'
         }, {
           cwd: '<%= config.src %>/error/',
-          dest: '<%= config.dist %>/',
+          dest: '<%= config.temp %>/',
           expand: true,
           src: '**/*.hbs'
         }, {
           cwd: '<%= config.src %>/blog/',
-          dest: '<%= config.dist %>/',
+          dest: '<%= config.temp %>/blog',
           expand: true,
           src: '**/*.hbs'
         }, {
           cwd: '<%= config.src %>/games/',
-          dest: '<%= config.dist %>/',
+          dest: '<%= config.temp %>/games/',
           expand: true,
           src: '**/*.hbs'
         }]
@@ -115,7 +121,7 @@ module.exports = function(grunt) {
         },
         files: [{
           cwd: '<%= config.src %>/blog/',
-          dest: '<%= config.dist %>/',
+          dest: '<%= config.temp %>/blog/',
           expand: true,
           src: '**/*.hbs'
         }]
@@ -126,7 +132,7 @@ module.exports = function(grunt) {
         },
         files: [{
           cwd: '<%= config.src %>/games/',
-          dest: '<%= config.dist %>/',
+          dest: '<%= config.temp %>/games/',
           expand: true,
           src: '**/*.hbs'
         }]
@@ -134,6 +140,23 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      assemble: {
+        expand: true, 
+        cwd: '<%= config.temp %>', 
+        src: ['**/*.html'], 
+        dest: '<%= config.dist %>', 
+        rename: function(dest, src) {
+            var filename = src.replace(/^.*[\\\/]/, '');
+            var withoutExt = filename.replace(/.html/, '' );
+            if ( filename === "index.html" || !isNaN(parseInt(withoutExt)) ) {
+                // Homepage and error pages stay in the root.
+                return dest + "/" + filename;
+            } else {
+                // All other files go into a folder (named after the file) as index.html
+                return dest + "/" + src.replace(/.html/, "/index.html");
+            }
+        }
+      },
       bootstrap: {
         expand: true,
         cwd: 'bower_components/bootstrap/dist/',
@@ -161,9 +184,40 @@ module.exports = function(grunt) {
       }
     },
 
+    replace: {
+      assemble: {
+        options: {
+          patterns: [
+            {
+              match: /href="\/..*dist/g,
+              replacement: 'href="',
+            },
+            {
+              match: /src="\/..*dist/g,
+              replacement: 'src="',
+            }
+          ]
+        },
+        files: [
+          {
+            expand: true, 
+            cwd: '<%= config.dist %>',
+            src: [
+                '**/*.html'
+            ],
+            dest: '<%= config.dist %>'
+          }
+        ]
+        ,
+      }
+    },
+
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}'],
+    clean: [
+      '<%= config.dist %>/**/*.{html,xml}', 
+      '<%= config.temp %>/**/*.{html,xml}' 
+    ],
 
     'gh-pages': {
       website: {
@@ -180,17 +234,23 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-replace');
 
+  grunt.registerTask('build', [
+    'clean',
+    'assemble',
+    'copy',
+    'replace'
+  ]);
+  
   grunt.registerTask('server', [
     'build',
     'connect:livereload',
     'watch'
   ]);
 
-  grunt.registerTask('build', [
-    'clean',
-    'copy',
-    'assemble'
+  grunt.registerTask('default', [
+    'build'
   ]);
 
   grunt.registerTask('deploy', [
@@ -198,8 +258,5 @@ module.exports = function(grunt) {
     'gh-pages'
   ]);
 
-  grunt.registerTask('default', [
-    'build'
-  ]);
 
 };

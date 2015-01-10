@@ -9,10 +9,10 @@ root: true
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h2>
-                    <a href="{{ basename }}.html">{{data.title}}</a>
+                    <a href="{{ basename }}">{{data.title}}</a>
                 </h2>
                 Posted: {{data.posted}}
-                <a href="{{ basename }}.html#disqus_thread">0 Comments</a>
+                <a href="{{ basename }}#disqus_thread">0 Comments</a>
             </div>
             <div class="panel-body">
                 {{#if data.tagline}}
@@ -25,7 +25,7 @@ root: true
                         {{{ md data.intro }}}
                     <p>
                 {{/if}}
-                <a class="btn btn-custom btn-large" href="{{ basename }}.html">Read more...</a>
+                <a class="btn btn-custom btn-large" href="{{ basename }}">Read more...</a>
             </div>
         </div>
     {{/each}}
