@@ -131,20 +131,25 @@ div.navbar-header > button {
 .nav .open>a,
 .nav .open>a:hover,
 .nav .open>a:focus {
-    background: #B7B7B9;
-    border-color: #333333;
+    background: #627075;
+    border-color: #6BD7C4;
 }
 
 ul.nav.navbar-nav.navbar-right > li > ul {
-    background: #B7B7B9;
+    background: #627075;
+}
+
+.dropdown-header {
+    color: #e5e5e5; 
 }
 
 ul.nav.navbar-nav.navbar-right > li > ul > li > a:hover,
 ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
-    color: black;
+    color: #6BD7C4;
     border: none;
     background: #333333;
 }
+
 
 /* standard navbar */
 @media (min-width: 768px) {
@@ -194,7 +199,7 @@ div.panel.panel-default > div.panel-heading,
     bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: #333333;
+    background-color: #B7B7B9;
 }
 
 
