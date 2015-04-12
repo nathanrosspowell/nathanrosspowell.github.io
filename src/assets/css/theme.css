@@ -52,13 +52,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body > div.container.theme-showcase > h1,
-body > div.container.theme-showcase > div > div.panel-body > h3 {
+div.panel-body > h1,
+div.panel-body > h2,
+div.panel-body > h3,
+div.panel-body > h4,
+div.panel-body > h5,
+div.panel-body > h6 {
     color: #773D83;
 }
 
 body > div.container.theme-showcase > div > div.panel-heading > h2 > a,
 body > div.container.theme-showcase > div > div.panel-heading > a {
     color: #6BD7C4;
+}
+
+hr {
+    border-color: #773D83;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -174,6 +183,8 @@ div.panel.panel-default > div.panel-heading,
 .panel-heading {
     color: #6BD7C4;
     background: #627075;
+    border: none;
+    border-radius: 0px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -236,9 +247,9 @@ i.social.fa:hover {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .btn-custom { 
-  color: #333333;
-  background-color: #773D83; 
-  border-color: #608A76; 
+  color: #773D83; 
+  background-color: #6BD7C4; 
+  border-color: #769993; 
 } 
  
 .btn-custom:hover, 
@@ -246,9 +257,9 @@ i.social.fa:hover {
 .btn-custom:active, 
 .btn-custom.active, 
 .open .dropdown-toggle.btn-custom { 
-  color: #333333;
-  background-color: #87E6B7; 
-  border-color: #608A76; 
+  color: #773D83; 
+  background-color: #87FFE9; 
+  border-color: #769993; 
 } 
  
 .btn-custom:active, 
@@ -272,13 +283,13 @@ fieldset[disabled] .btn-custom:active,
 .btn-custom.disabled.active, 
 .btn-custom[disabled].active, 
 fieldset[disabled] .btn-custom.active { 
-  background-color: #773D83; 
-  border-color: #608A76; 
+  background-color: #6BD7C4; 
+  border-color: #769993; 
 } 
  
 .btn-custom .badge { 
-  color: #773D83; 
-  background-color: #ffffff; 
+  color: #6BD7C4; 
+  background-color: #773D83; 
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
