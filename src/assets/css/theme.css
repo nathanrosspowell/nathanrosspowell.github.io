@@ -150,7 +150,11 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
     background: #333333;
 }
 
-.dropdown-menu .divider {
+.dropdown-menu {
+    border: 2px solid #773D83;
+}
+
+.dropdown-menu.divider {
     border: 1px solid #773D83;
 }
 
