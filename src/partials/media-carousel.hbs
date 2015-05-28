@@ -42,10 +42,10 @@ component: media
                         </div>
                     {{/is}}
                     {{#is type "image" }}
-                        <img src="{{../assets}}/assets/{{ src }}" class="carousel-img"/>
+                        <a href="{{../assets}}/assets/{{ src }}"><img src="{{../assets}}/assets/{{ src }}" class="carousel-img"/></a>
                     {{/is}}
                     {{#is type "ext-image" }}
-                        <img src="{{ src }}" class="carousel-img"/>
+                        <a href="{{ src }}"><img src="{{ src }}" class="carousel-img"/></a>
                     {{/is}}
                     {{#is type "gametrailer" }}
                         <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
