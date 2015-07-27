@@ -5,4 +5,4 @@ There is definitely a large array of choices for keyboards as long as you are wi
 
 My personal preference for periferals is Logitech.
 The last keyboard and mouse combo I purchased was the Wave for about £50.
-It was then a big step to buy a new keyboard from a far smaller, unknown to me, company for $130.       
+It was then a big step to buy a new keyboard from a far smaller, unknown to me, company for $130. 

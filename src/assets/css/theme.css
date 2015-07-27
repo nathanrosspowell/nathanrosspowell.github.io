@@ -183,6 +183,18 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
     border: 3px solid #773D83;
 }
 
+.jumbotron > h1 {
+    color: #773D83;
+    font-weight: bold;
+    -webkit-text-fill-color: #773D83; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #6BD7C4;
+}
+
+.jumbotron > hr {
+    border-color: #773D83;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .well,
 .panel {
