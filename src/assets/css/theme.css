@@ -375,3 +375,10 @@ fieldset[disabled] .btn-custom.active {
     margin-right: auto;
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+img.blog {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #773D83;
+}
