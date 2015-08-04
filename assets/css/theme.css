@@ -67,7 +67,10 @@ body > div.container.theme-showcase > div > div.panel-heading > a {
 }
 
 hr {
-    border-color: #773D83;
+    height: 3px;
+    color: #773D83;
+    background-color: #773D83;
+    border: none;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -183,6 +186,48 @@ ul.nav.navbar-nav.navbar-right > li > ul > li > a:focus {
     border: 3px solid #773D83;
 }
 
+.jumbotron > h1 {
+    color: #773D83;
+    font-weight: bold;
+    -webkit-text-fill-color: #773D83;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #6BD7C4;
+}
+
+body > div.container.theme-showcase > div.jumbotron > p > a {
+    color: #6BD7C4;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+pre,
+p > code {
+    color: #6BD7C4;
+    background: #627075;
+    border: 1px solid #773D83;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body > div.container.theme-showcase > h1 {
+    font-weight: bold;
+}
+
+body > div.container.theme-showcase > h1:after {
+    content: ' ';
+    display: block;
+    border: 2px solid #773D83;
+}
+
+body > div.container.theme-showcase > h2 {
+    color: #773D83;
+    text-decoration: underline;
+}
+
+body > div.container.theme-showcase > h3 {
+    color: #773D83;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .well,
 .panel {
@@ -206,8 +251,9 @@ div.panel.panel-default > div.panel-heading,
     bottom: 0;
     width: 100%;
     height: 100px;
-    color: #6BD7C4;
+    color: #6BD7C4 !important;
     background-color: #627075;
+    overflow: hidden;
 }
 
 
@@ -264,7 +310,7 @@ i.social.fa:hover {
   background-color: #6BD7C4; 
   border-color: #769993; 
 } 
- 
+        
 .btn-custom:hover, 
 .btn-custom:focus, 
 .btn-custom:active, 
@@ -342,3 +388,10 @@ fieldset[disabled] .btn-custom.active {
     margin-right: auto;
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+img.blog {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #773D83;
+}
