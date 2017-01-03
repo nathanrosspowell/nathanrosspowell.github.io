@@ -1,0 +1,13 @@
+<h1 class="entry-title">
+{% if post.title %}
+  <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endif %}
+</h1>
+
+{% if post.excerpt %}
+  <div class="entry-content">{{ post.excerpt }}</div>
+{% endif %}
+
+<p> 
+  <a href="{{ post.url }}">Read more...</a></li>
+</p>

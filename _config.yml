@@ -1,0 +1,35 @@
+author: Nathan Ross Powell
+email: nathanrosspowell@gmail.com
+handle: nathanrosspowell
+handle2: nathanross
+website: nathanrosspowell.com
+
+repository: nathanrosspowell/nathanrosspowell.github.io
+permalink: pretty
+excerpt_separator: <!--more-->
+
+collections:
+  games:
+    output: true
+  projects:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "blog"
+  -
+    scope:
+      path: ""
+      type: "games" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "games" # overrides previous default layout
+  -
+    scope:
+      path: ""
+      type: "projects" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "projects" # overrides previous default layout

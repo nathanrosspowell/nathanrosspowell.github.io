@@ -1,0 +1,33 @@
+{% include header.html %}
+  <section>
+    <div class="grid">
+      <div class="unit four-fifths">
+        <article>
+          <h1>{{ page.title }}</h1>
+          {% if page.published %}
+            <h5>Published: {{ page.published }}</h5>
+          {% endif %}
+          {{ content }}
+          {% include collection_pagination.html %}
+        </article>
+        {% include comments.html %}
+      </div>
+
+      <div class="unit one-fifth hide-on-mobiles">
+        <aside>
+          <h4>{{ collection_name }}</h4>
+          <ul>
+            {% for post in collection %}
+              {% assign current = "" %}
+              {% if post.url == page.url %}
+                {% assign current = "current" %}
+              {% endif %}
+              <li class="{{ current }}"><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+{% include footer.html %}

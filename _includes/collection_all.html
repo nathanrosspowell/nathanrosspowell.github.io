@@ -1,0 +1,6 @@
+<h1>All {{ collection_name }}</h1>
+<ul class="posts">
+  {% for post in collection %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+{% assign nav_current = page.url | downcase | split: '/' %}
+{% assign current = nav_current[1]  %}
+{% assign home_current = "" %}
+{% assign blog_current = "" %}
+{% assign games_current = "" %}
+{% assign contact_current = "" %}
+{% assign projects_current = "" %}
+
+{% if page.url == '/' %}
+    {% assign home_current = "current" %}
+{% elsif current == 'games' %}
+    {% assign games_current = "current" %}
+{% elsif current == 'contact' %}
+    {% assign contact_current = "current" %}
+{% elsif current == 'projects' %}
+    {% assign projects_current = "current" %}
+{% else %}
+    {% assign blog_current = "current" %}
+{% endif %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }} | {{ site.website }}</title>
+   <meta name="author" content="{{ site.author }}" />
+   <link href="http://feeds.feedburner.com/{{ site.handle }}" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+   <meta name="readability-verification" content="QCzSs992GxmRYRKVpPeZ6LE2tS8aYKxsSSQKV8YM"/>
+   <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body class="wrap">
+  <header>
+
+    <nav class="mobile-nav show-on-mobiles">
+      <ul>
+        <li class="{{ home_current }}">
+          <a href="/">Home</a>
+        </li>
+        <li class="{{ blog_current }}">
+          <a href="/blog/">Blog</a>
+        </li>
+        <li class="{{ games_current }}">
+          <a href="/games/">Games</a>
+        </li>
+        <li class="{{ projects_current }}">
+          <a href="/projects/">Projects</a>
+        </li>
+        <li class="{{ contact_current }}">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="grid">
+      <div class="unit one-fifth center-on-mobiles">
+        <h1>
+          <a href="/">
+            <span class="sr-only">Jekyll</span>
+            <img class="navbar-profile-img" src="/images/nathan-100x100.jpg" alt="Profile Picture">
+          </a>
+        </h1>
+      </div>
+      <nav class="main-nav unit four-fifths hide-on-mobiles">
+        <ul>
+          <li class="{{ home_current }}">
+            <a href="/">Home</a>
+          </li>
+          <li class="{{ blog_current }}">
+            <a href="/blog/">Blog</a>
+          </li>
+          <li class="{{ games_current }}">
+            <a href="/games/">Games</a>
+          </li>
+          <li class="{{ projects_current }}">
+            <a href="/projects/">Projects</a>
+          </li>
+          <li class="{{ contact_current }}">
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+

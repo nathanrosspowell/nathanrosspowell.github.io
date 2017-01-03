@@ -1,0 +1,26 @@
+{% assign prev = nil %}
+{% assign next = nil %}
+
+{% for item in collection %}
+  {% if item.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prev = iterator %}
+    {% endunless %}
+
+    {% unless forloop.last %}
+      {% assign next = collection[forloop.index] %}
+    {% endunless %}
+  {% endif %}
+
+  {% assign iterator = item %}
+{% endfor %}
+
+<hr class="colored-rule"/>
+<div class="PageNavigation">
+  {% if prev %}
+    <a class="prev" href="{{prev.url}}">&laquo; {{prev.title}}</a>
+  {% endif %}
+  {% if next.url %}
+    <a class="next" href="{{next.url}}">{{next.title}} &raquo;</a>
+  {% endif %}
+</div>
