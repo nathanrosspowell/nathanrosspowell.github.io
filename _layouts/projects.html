@@ -1,2 +1,18 @@
-{% include projects_defines.html %}
-{% include collection_detail.html %}
+---
+layout: default
+title: Home 
+title: Projects
+---
+
+        <p>
+          Projects menu.
+        </p>
+      </div>
+    </div>
+
+{% assign collection = site.projects %}
+{% assign collection_name = "Projects" %}
+
+<div class="docs-section" id="projects">
+{% include collection_all.html %}
+</div>
