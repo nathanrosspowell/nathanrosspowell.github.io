@@ -1,5 +1,5 @@
 ---
-title: Game 1
+title: "DiRT: Showdown"
 display_order: 1
 ---
 
@@ -7,6 +7,5 @@ Hello from
 ==========
 
 
-Game 1
-
+showdown
 

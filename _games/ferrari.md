@@ -1,5 +1,5 @@
 ---
-title: Game 2
+title: "Ferrari: The Race Experience"
 display_order: 2
 ---
 
@@ -7,6 +7,5 @@ Hello from
 ==========
 
 
-Game 2
-
+Ferrari
 

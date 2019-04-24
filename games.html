@@ -1,8 +1,18 @@
 ---
 layout: default
 title: Home 
+title: Games
 ---
 
-{% include games_defines.html %}
-{% include collection_all.html %}
+        <p>
+          Games menu.
+        </p>
+      </div>
+    </div>
 
+{% assign collection = site.games | sort:"display_order" | reverse %}
+{% assign collection_name = "Games" %}
+
+<div class="docs-section" id="games">
+{% include collection_all.html %}
+</div>

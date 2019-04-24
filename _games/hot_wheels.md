@@ -1,5 +1,5 @@
 ---
-title: Game 1
+title: "Hot Wheels: Beat That!"
 display_order: 1
 ---
 

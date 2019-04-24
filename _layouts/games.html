@@ -1,2 +1,13 @@
-{% include games_defines.html %}
+{% assign collection = site.games | sort:"display_order" | reverse %}
+{% assign collection_name = "Games" %}
+
+{% include header.html %}
+
+        <p>
+          Find more at the <a href="/games/">game menu</a>.
+        </p>
+      </div>
+    </div>
+
 {% include collection_detail.html %}
+{% include footer.html %}

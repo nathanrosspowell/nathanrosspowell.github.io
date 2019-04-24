@@ -1,35 +1,14 @@
+{% assign collection = site.posts %}
+{% assign collection_name = "Blogs" %}
+
 {% include header.html %}
 
-  <section>
-    <div class="grid">
-      <div class="unit four-fifths">
-        <article>
-          <h1>{{ page.title }}</h1>
-          <h5>{{ page.date | date_to_string }}</h5>
-          {{ content }}
-          {% assign collection = site.posts %}
-          {% include collection_pagination.html %}
-        </article>
-
-        {% include comments.html %}
-      </div>
-
-      <div class="unit one-fifth hide-on-mobiles">
-        <aside>
-          <h4>Blogs</h4>
-          <ul>
-            {% for post in site.posts %}
-              {% assign current = "" %}
-              {% if post.url == page.url %}
-                {% assign current = "current" %}
-              {% endif %}
-              <li class="{{ current }}"><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </aside>
+        <p>
+          Find more at the <a href="/blog/">blog menu</a>.
+        </p>
       </div>
     </div>
-  </section>
 
 
+{% include collection_detail.html %}
 {% include footer.html %}

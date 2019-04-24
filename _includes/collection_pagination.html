@@ -15,12 +15,21 @@
   {% assign iterator = item %}
 {% endfor %}
 
-<hr class="colored-rule"/>
-<div class="PageNavigation">
-  {% if prev %}
-    <a class="prev" href="{{prev.url}}">&laquo; {{prev.title}}</a>
-  {% endif %}
-  {% if next.url %}
-    <a class="next" href="{{next.url}}">{{next.title}} &raquo;</a>
-  {% endif %}
+<hr />
+
+<div class="container">
+  <div class="example-grid docs-example">
+    <div class="row">
+      {% if prev %}
+        <div class="six columns">
+            <a class="prev" href="{{prev.url}}">&laquo; {{prev.title}}</a>
+        </div>
+      {% endif %}
+      {% if next.url %}
+        <div class="six columns">
+          <a class="next" href="{{next.url}}">{{next.title}} &raquo;</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
 </div>

@@ -2,6 +2,15 @@
 layout: default
 title: Projects 
 ---
+        <p>
+          Projects menu.
+        </p>
+      </div>
+    </div>
 
-{% include projects_defines.html %}
+{% assign collection = site.projects %}
+{% assign collection_name = "Projects" %}
+
+<div class="docs-section" id="projects">
 {% include collection_all.html %}
+</div>
