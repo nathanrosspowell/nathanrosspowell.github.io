@@ -187,28 +187,47 @@ title: Home
       <h6 class="docs-header">Contact</h6>
       <p>Feel free to send me a message. I'll get back to you ASAP.</p>
 
+      <noscript>This will probably not work without JavaScript, sorry.</noscript>
       <div class="docs-example docs-example-forms">
-        <form method="post" action="https://nathanrosspowell.prod.with-datafire.io/contact">
+        <form name="contact" method="post" action="https://99qd97nh5m.execute-api.us-east-2.amazonaws.com/default/contact-request">
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">Full name</label>
+              <input class="u-full-width" type="text" placeholder="Nic Cage" id="exampleEmailInput" name="fullName">
+            </div>
+            <div class="six columns">
+              <label for="exampleEmailInput">Subject</label>
+              <input class="u-full-width" type="text" placeholder="National Treasure 3" id="subjectInput" name="subject">
+            </div>
+          </div>
           <div class="row">
             <div class="six columns">
               <label for="exampleEmailInput">Your email</label>
-              <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput" name="emailAddress">
+              <input class="u-full-width" type="email" placeholder="onetruegod@aol.com" id="exampleEmailInput" name="emailAddress">
+            </div>
+            <div class="six columns">
+              <label for="exampleEmailInput">Verify email</label>
+              <input class="u-full-width" type="email" placeholder="..." id="exampleEmailInput" name="emailAddress">
             </div>
           </div>
 
           <label for="exampleMessage">Message</label>
           <textarea class="u-full-width" placeholder="Hi Nathan, …" id="exampleMessage" name="message"></textarea>
 
-          <div class="g-recaptcha" id="captcha-button"></div>
-          <div>
-            <input class="button-primary" type="submit" value="Submit" name="submit">
-          </div>
+          <div class="g-recaptcha" id="captcha-button" data-callback="captchaButtonCallback"></div>
+          <button type="submit" class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
         </form>
 
 
-        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
         </script>
+        <script> 
+          function captchaButtonCallback(response) { 
+            document.getElementById("submit").disabled = false;
+            document.getElementById("submit").removeAttribute("title");
+          } 
+        </script>
+
 
 
       </div>

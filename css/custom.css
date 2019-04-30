@@ -223,3 +223,17 @@
     .popover-item:first-child .popover-link:hover:after {
       border-bottom-color: #33C3F0; }
   }
+
+
+button[disabled] {
+  background:#ccc;
+  border-color: #ccc;
+  text-shadow:none;
+}
+
+button[disabled]:hover {
+  background:#700;
+  border-color: #ccc;
+  text-shadow:none;
+  cursor:not-allowed
+}
