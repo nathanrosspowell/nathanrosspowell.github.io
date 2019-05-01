@@ -188,35 +188,48 @@ title: Home
       <p>Feel free to send me a message. I'll get back to you ASAP.</p>
 
       <noscript>This will probably not work without JavaScript, sorry.</noscript>
+      <div class="docs-example docs-example-forms">
+        <form name="contact" method="post" action="https://nathanrosspowell.prod.with-datafire.io/contact">
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">Full name</label>
+              <input class="u-full-width" type="text" placeholder="Nic Cage" id="exampleEmailInput" name="fullName">
+            </div>
+            <div class="six columns">
+              <label for="exampleEmailInput">Subject</label>
+              <input class="u-full-width" type="text" placeholder="National Treasure 3" id="subjectInput" name="subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">Your email</label>
+              <input class="u-full-width" type="email" placeholder="onetruegod@aol.com" id="exampleEmailInput" name="emailAddress">
+            </div>
+            <div class="six columns">
+              <label for="exampleEmailInput">Verify email</label>
+              <input class="u-full-width" type="email" placeholder="..." id="exampleEmailInput" name="emailAddress">
+            </div>
+          </div>
 
-      <p class="errors">Please fill in all fields.</p>
-      <form action="https://afpniblpvf.execute-api.us-east-2.amazonaws.com/prod/api" method="POST" id="contact-us-form">
-          <div class="form-group">
-              <label for="nameInputEmail1">Name</label>
-              <input type="text" class="form-control" id="nameInputEmail1" name="name" placeholder="Full name">
-          </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" name="email"
-                     placeholder="Enter email">
-          </div>
-          <div class="form-group">
-              <label for="phoneInputEmail1">Phone number</label>
-              <input type="text" class="form-control" id="phoneInputEmail1" name="phone"
-                     placeholder="Enter phone">
-          </div>
-          <div class="form-group">
-              <label for="messageInputEmail1">Message</label>
-              <textarea type="textarea" class="form-control" id="messageInputEmail1" name="message"
-                        placeholder="Enter message"></textarea>
-          </div>
-          <p class="thanks">Thanks!  We'll contact you soon.</p>
-          <p class="sending">Sending...</p>
-          <button type="submit" class="btn btn-primary g-recaptcha"
-                  data-sitekey="6Ld26aAUAAAAAPhk0325UV0K3mYcYKy9CDkQqiPt"
-                  data-callback="onContctUsSubmit" data-badge="inline" >Submit</button>
-      </form>
+          <label for="exampleMessage">Message</label>
+          <textarea class="u-full-width" placeholder="Hi Nathan, …" id="exampleMessage" name="message"></textarea>
+
+          <div class="g-recaptcha" id="captcha-button" data-callback="captchaButtonCallback"></div>
+          <button type="submit" disabled class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
+        </form>
 
 
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+        </script>
+        <script> 
+          function captchaButtonCallback(response) { 
+            document.getElementById("submit").disabled = false;
+            document.getElementById("submit").removeAttribute("title");
+          } 
+        </script>
+
+
+
+      </div>
 
     </div>
