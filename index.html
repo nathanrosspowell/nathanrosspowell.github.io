@@ -188,31 +188,31 @@ title: Home
       <p>Feel free to send me a message. I'll get back to you ASAP.</p>
 
       <noscript>This will probably not work without JavaScript, sorry.</noscript>
-      <div class="docs-example docs-example-forms">
-        <form name="contact" method="post" action="https://99qd97nh5m.execute-api.us-east-2.amazonaws.com/default/contact-request">
+      <div class="docs- docs--forms">
+        <form name="contact" method="post" action="https://afpniblpvf.execute-api.us-east-2.amazonaws.com/prod/api">
           <div class="row">
             <div class="six columns">
-              <label for="exampleEmailInput">Full name</label>
-              <input class="u-full-width" type="text" placeholder="Nic Cage" id="exampleEmailInput" name="fullName">
+              <label for="NameInput">Full name</label>
+              <input class="u-full-width" type="text" placeholder="Nic Cage" id="NameInput" name="name">
             </div>
             <div class="six columns">
-              <label for="exampleEmailInput">Subject</label>
+              <label for="EmailInput">Subject</label>
               <input class="u-full-width" type="text" placeholder="National Treasure 3" id="subjectInput" name="subject">
             </div>
           </div>
           <div class="row">
             <div class="six columns">
-              <label for="exampleEmailInput">Your email</label>
-              <input class="u-full-width" type="email" placeholder="onetruegod@aol.com" id="exampleEmailInput" name="emailAddress">
+              <label for="EmailInput">Your email</label>
+              <input class="u-full-width" type="email" placeholder="onetruegod@aol.com" id="EmailInput" name="email">
             </div>
             <div class="six columns">
-              <label for="exampleEmailInput">Verify email</label>
-              <input class="u-full-width" type="email" placeholder="..." id="exampleEmailInput" name="emailAddress">
+              <label for="EmailInput2">Verify email</label>
+              <input class="u-full-width" type="email" placeholder="..." id="EmailInput2">
             </div>
           </div>
 
-          <label for="exampleMessage">Message</label>
-          <textarea class="u-full-width" placeholder="Hi Nathan, …" id="exampleMessage" name="message"></textarea>
+          <label for="Message">Message</label>
+          <textarea class="u-full-width" placeholder="Hi Nathan, …" id="Message" name="message"></textarea>
 
           <div class="g-recaptcha" id="captcha-button" data-callback="captchaButtonCallback"></div>
           <button type="submit" class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
