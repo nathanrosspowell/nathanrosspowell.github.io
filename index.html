@@ -214,13 +214,16 @@ title: Home
           <label for="exampleMessage">Message</label>
           <textarea class="u-full-width" placeholder="Hi Nathan, …" id="exampleMessage" name="message"></textarea>
 
-          <div class="g-recaptcha" id="captcha-button" data-callback="captchaButtonCallback"></div>
+          <div class="g-recaptcha"
+               id="captcha-button"
+               data-callback="captchaButtonCallback"
+               data-sitekey="6Ld26aAUAAAAAPhk0325UV0K3mYcYKy9CDkQqiPt"></div>
+
+
           <button type="submit" disabled class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
         </form>
 
 
-        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-        </script>
         <script> 
           function captchaButtonCallback(response) { 
             document.getElementById("submit").disabled = false;
