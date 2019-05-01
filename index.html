@@ -220,12 +220,13 @@ title: Home
                data-sitekey="6Ld26aAUAAAAAPhk0325UV0K3mYcYKy9CDkQqiPt"></div>
 
 
-          <button type="submit" disabled="true" class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
+          <button type="submit" id="submitform" name="SendMail" disabled="true" class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
+
         </form>
 
 
         <script> 
-          var captchaButtonCallback = function(response) {
+          function captchaButtonCallback(response) { 
             document.getElementById("submit").disabled = false;
           } 
         </script>
