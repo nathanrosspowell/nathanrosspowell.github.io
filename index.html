@@ -1,238 +1,218 @@
 ---
 layout: default
-title: Home 
+title: Home
 ---
 
 {% assign post = site.posts.first %}
 {% assign content = post.content %}
 
-        <p>
-          I'm Nathan, a video game programmer. This small website outlines my work experience, shares some of my projects and gives you ways to contact me.
-        </p>
-      </div>
-    </div>
+<p>
+  Right now (2023), I'm an experienced gaming technology leader with a strong passion for collaboration and empowering
+  teams. As a technology owner, I focus on creating an environment where everyone can thrive and contribute their best
+  to the gaming industry.
+</p>
+<ul>
+  <li>
+    Over 16 years of experience in the game industry
+  </li>
+  <li>
+    More than six years in technical leadership roles
+  </li>
+  <li>
+    Guided a team in a studio leadership role for ~2 years
+  </li>
+  <li>
+    My programming journey spans 18+ years and 3 console generations
+  </li>
+  <li>
+    Lifelong gaming fan: Amiga ➜ PS1➜ Xbox ➜ 360 ➜ PS4 ➜ PC 🤓
+  </li>
+</ul>
+</div>
+</div>
 
 
 
-    <!-- Main Navigation
+<!-- Main Navigation
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#social">Social</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#blog">Blog</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#games">Games</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#cv">CV</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<nav class="navbar">
+  <div class="container">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a class="navbar-link" href="#social">Social</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="#games">Games</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="#blog">Blog</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="#cv">CV</a></li>
+    </ul>
+  </div>
+</nav>
 
 
-    <!-- Social Media Section
+<!-- Social Media Section
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="docs-section" id="social">
-      <h6 class="docs-header">Social</h6>
-      <p>
-          Here are few places you can find me at on the web. 
-          You can poke me on those sites or hit up the 
-          <a href="#contact">contact form</a> below.</li>
-      </p>
+<div class="docs-section" id="social">
+  <h6 class="docs-header">Social</h6>
+  <p>
+    Here are few places you can find me at on the web.
+    You can poke me on those sites or hit up the
+    <a href="#contact">contact form</a> below.</li>
+  </p>
 
-      <!-- columns should be the immediate child of a .row -->
-      <div class="container">
-        <div class="example-grid docs-example">
-          <div class="row">
-            <div class="four columns"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/nathanrosspowell/">LinkedIn</a></div>
-            <div class="four columns"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/nathanrosspowell/">Instagram</a></div>
-            <div class="four columns"><i class="fab fa-twitter"></i><a href="https://twitter.com/nathanross">Twitter</a></div>
-          </div>
+  <!-- columns should be the immediate child of a .row -->
+  <div class="container">
+    <div class="example-grid docs-example">
+      <div class="row">
+        <div class="four columns"><i class="fab fa-linkedin"></i><a
+            href="https://www.linkedin.com/in/nathanrosspowell/">LinkedIn</a></div>
+        <div class="four columns"><i class="fab fa-instagram"></i><a
+            href="https://www.instagram.com/nathanrosspowell/">Instagram</a></div>
+        <div class="four columns"><i class="fab fa-twitter"></i><a href="https://twitter.com/nathanross">Twitter</a>
         </div>
       </div>
-
     </div>
+  </div>
+
+</div>
 
 
-    <div class="docs-section" id="blog">
-      <h6 class="docs-header">
-      {% if post.title %}
-        <a href="/blog/">Blog</a> &raquo;
-        <span>{{ post.date | date_to_string }}</span>
-        &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-      {% endif %}
-      </h6>
 
-      {% if post.excerpt %}
-        <div>{{ post.excerpt }}</div>
-      {% endif %}
-
-      <p> 
-        <a href="{{ post.url }}">Read more...</a>
-      </p>
-
-    </div>
-
-
-    <!-- Games Section
+<!-- Games Section
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="docs-section" id="games">
-      <h6 class="docs-header">Games</a></h6>
-      <p>These are the games that I've helped create.</p>
+<div class="docs-section" id="games">
+  <h6 class="docs-header">Games</a></h6>
+  <p>These are the games that I've helped create.</p>
 
-      <table class="u-full-width">
-          <thead>
-            <tr>
-              <th><i title="Game Name" class="fas fa-gamepad"></i></th>
-              <th><i title="Release Date" class="fas fa-calendar-day"></i></th>
-              <td><i title="Developer" class="fas fa-map-marker-alt"></i></td>
-              <td><i title="Job Title" class="fas fa-briefcase"></i></td>
-              <th><i title="Metacritic" class="fas fa-star"></i></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Unannounced</td>
-              <td>TBC</td>
-              <td>Ubisoft MTL</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><a href="/games/watch_dogs2">Watch_Dogs 2</a></td>
-              <td>2016</td>
-              <td>Ubisoft MTL</td>
-              <td>Network Prog.</td>
-              <td><a href="https://www.metacritic.com/game/playstation-4/watch-dogs-2"><i class="fas fa-link"></i></a></td>
-            </tr>
-            <tr>
-              <td><a href="/games/watch_dogs">Watch_Dogs</a></td>
-              <td>2014</td>
-              <td>Ubisoft MTL</td>
-              <td>Multiplayer Prog.</td>
-              <td><a href="https://www.metacritic.com/game/playstation-4/watch-dogs"><i class="fas fa-link"></i></a></td>
-            </tr>
-            <tr>
-              <td><a href="/games/showdown">DiRT: Showdown</td>
-              <td>2012</td>
-              <td>Codemasters</td>
-              <td>Gameplay Prog.</td>
-              <td><a href="https://www.metacritic.com/game/playstation-3/dirt-showdown"><i class="fas fa-link"></i></a></td>
-            </tr>
-            <tr>
-              <td><a href="/games/red_river">Operation Flashpoint: Red River</td>
-              <td>2011</td>
-              <td>Codemasters</td>
-              <td>Gameplay Prog.</td>
-              <td><a href="https://www.metacritic.com/game/xbox-360/operation-flashpoint-red-river"><i class="fas fa-link"></i></a></td>
-            </tr>
-            <tr>
-              <td><a href="/games/ferrari">Ferrari: The Race Experience</td>
-              <td>2010</td>
-              <td>Eutechnyx</td>
-              <td>Wii Prog.</td>
-              <td><a href="https://www.metacritic.com/game/wii/ferrari-the-race-experience"><i class="fas fa-link"></i></a></td>
-            </tr>
-            <tr>
-              <td><a href="/games/hot_wheels">Hot Wheels: Beat That!</td>
-              <td>2007</td>
-              <td>Eutechnyx</td>
-              <td>UI Prog.</td>
-              <td><a href="https://www.metacritic.com/game/xbox-360/hot-wheels-beat-that!"><i class="fas fa-link"></i></a></td>
-            </tr>
-          </tbody>
-        </table>
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th><i title="Game Name" class="fas fa-gamepad"></i></th>
+        <th><i title="Release Date" class="fas fa-calendar-day"></i></th>
+        <td><i title="Developer" class="fas fa-map-marker-alt"></i></td>
+        <td><i title="Job Title" class="fas fa-briefcase"></i></td>
+        <th><i title="Metacritic" class="fas fa-star"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Work In Progress</td>
+        <td>TBC</td>
+        <td>TBC</td>
+        <td>CTO</td>
+        <td><i class="fas fa-user-secret"></i></td>
+      </tr>
+      <tr>
+        <td>Rainbow Six Mobile</a></td>
+        <td>2023</td>
+        <td>Ubisoft MTL</td>
+        <td>Technical Lead / Project Lead Programmer</td>
+        <td><i class="fas fa-cogs"></i></td>
+      </tr>
+      <tr>
+        <td>Watch_Dogs: Legion</a></td>
+        <td>2020</td>
+        <td>Ubisoft MTL</td>
+        <td>Senior Network Programmer (Additional Programming)</td>
+        <td><a href="https://www.metacritic.com/game/playstation-4/watch-dogs-legion"><i class="fas fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td>Watch_Dogs 2</a></td>
+        <td>2016</td>
+        <td>Ubisoft MTL</td>
+        <td>Network Prog.</td>
+        <td><a href="https://www.metacritic.com/game/playstation-4/watch-dogs-2"><i class="fas fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td>Watch_Dogs</a></td>
+        <td>2014</td>
+        <td>Ubisoft MTL</td>
+        <td>Multiplayer Prog.</td>
+        <td><a href="https://www.metacritic.com/game/playstation-4/watch-dogs"><i class="fas fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td>DiRT: Showdown</td>
+        <td>2012</td>
+        <td>Codemasters</td>
+        <td>Gameplay Prog.</td>
+        <td><a href="https://www.metacritic.com/game/playstation-3/dirt-showdown"><i class="fas fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td>Operation Flashpoint: Red River</td>
+        <td>2011</td>
+        <td>Codemasters</td>
+        <td>Gameplay Prog.</td>
+        <td><a href="https://www.metacritic.com/game/xbox-360/operation-flashpoint-red-river"><i
+              class="fas fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td>Ferrari: The Race Experience</td>
+        <td>2010</td>
+        <td>Eutechnyx</td>
+        <td>Wii Prog.</td>
+        <td><a href="https://www.metacritic.com/game/wii/ferrari-the-race-experience"><i class="fas fa-link"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Hot Wheels: Beat That!</td>
+        <td>2007</td>
+        <td>Eutechnyx</td>
+        <td>UI Prog.</td>
+        <td><a href="https://www.metacritic.com/game/xbox-360/hot-wheels-beat-that!"><i class="fas fa-link"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    </div>
+</div>
 
 
 
-    <!-- Projects Section
+<!-- Projects Section
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="docs-section" id="projects">
-      <h6 class="docs-header">Projects</a></h6>
-      <p>A choice selection of some other work I've done in my spare time.</p>
+<div class="docs-section" id="projects">
+  <h6 class="docs-header">Projects</a></h6>
+  <p>A choice selection of some other work I've done in my spare time.</p>
 
-      <table class="u-full-width">
-          <thead>
-            <tr>
-              <th><i title="Project Name" class="fas fa-code"></i></th>
-              <th><i title="Project Description" class="fas fa-comment"></i></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="https://nathanrosspowell.com/presentations/">Presentations</a></td>
-              <td>Slides and training material I've published.</td>
-            </tr>
-          </tbody>
-        </table>
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th><i title="Project Name" class="fas fa-code"></i></th>
+        <th><i title="Project Description" class="fas fa-comment"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://nathanrosspowell.com/presentations/">Presentations</a></td>
+        <td>Slides and training material I've published.</td>
+      </tr>
+    </tbody>
+  </table>
 
-    </div>
+</div>
 
 
+<div class="docs-section" id="blog">
+  <h6 class="docs-header">
+    {% if post.title %}
+    <a href="/blog/">Blog</a> &raquo;
+    <span>{{ post.date | date_to_string }}</span>
+    &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
+  </h6>
 
-    <!-- CV Section
+  {% if post.excerpt %}
+  <div>{{ post.excerpt }}</div>
+  {% endif %}
+
+  <p>
+    <a href="{{ post.url }}">Read more...</a>
+  </p>
+
+</div>
+
+
+<!-- CV Section
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="docs-section" id="cv">
-      <h6 class="docs-header">CV</h6>
-      <p>A PDF version of what you can find on this site can be found ++TODO++.</p>
-    </div>
-
-
-
-    <!-- Contact Section
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="docs-section" id="contact">
-      <h6 class="docs-header">Contact</h6>
-      <p>Feel free to send me a message. I'll get back to you ASAP.</p>
-
-      <noscript>This will probably not work without JavaScript, sorry.</noscript>
-      <div class="docs-example docs-example-forms">
-        <form name="contact" method="post" action="https://nathanrosspowell.prod.with-datafire.io/contact">
-          <div class="row">
-            <div class="six columns">
-              <label for="exampleEmailInput">Full name</label>
-              <input class="u-full-width" type="text" placeholder="Nic Cage" id="exampleEmailInput" name="fullName">
-            </div>
-            <div class="six columns">
-              <label for="exampleEmailInput">Subject</label>
-              <input class="u-full-width" type="text" placeholder="National Treasure 3" id="subjectInput" name="subject">
-            </div>
-          </div>
-          <div class="row">
-            <div class="six columns">
-              <label for="exampleEmailInput">Your email</label>
-              <input class="u-full-width" type="email" placeholder="onetruegod@aol.com" id="exampleEmailInput" name="emailAddress">
-            </div>
-            <div class="six columns">
-              <label for="exampleEmailInput">Verify email</label>
-              <input class="u-full-width" type="email" placeholder="..." id="exampleEmailInput" name="emailAddress">
-            </div>
-          </div>
-
-          <label for="exampleMessage">Message</label>
-          <textarea class="u-full-width" placeholder="Hi Nathan, …" id="exampleMessage" name="message"></textarea>
-
-          <div class="g-recaptcha"
-               id="captcha-button"
-               data-callback="captchaButtonCallback"
-               data-sitekey="6Ld26aAUAAAAAPhk0325UV0K3mYcYKy9CDkQqiPt"></div>
-
-
-          <button type="submit" id="submitform" name="SendMail" disabled="true" class="button-primary" title="Pass the reCAPTCHA to be able to send.">SEND FORM</button>
-
-        </form>
-
-
-        <script> 
-          function captchaButtonCallback(response) { 
-            document.getElementById("submit").disabled = false;
-          } 
-        </script>
-
-
-
-      </div>
-
-    </div>
+<div class="docs-section" id="cv">
+  <h6 class="docs-header">CV</h6>
+  <p>A PDF version of what you can find on this site can be found ++TODO++.</p>
+</div>
